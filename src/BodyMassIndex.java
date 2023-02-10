@@ -24,8 +24,19 @@ public class BodyMassIndex {
         System.out.println("Please enter your height in inches: ");
         double height = in.nextDouble();
 
-        double bodyMassIndex = weight / (height * height);
+        double bodyMassIndex = (weight / (height * height)) * 703;
 
-        //ADD BMI INTERPRETATION ONCE ASSIGNMENT UPDATED
+        if (bodyMassIndex < 18.5) {
+            System.out.println("Underweight");
+        }
+        else if (bodyMassIndex >= 18.5 && bodyMassIndex < 25.0) {
+            System.out.println("Normal");
+        }
+        else if (bodyMassIndex >= 25.0 && bodyMassIndex < 30.0) {
+            System.out.println("Overweight");
+        }
+        else if (bodyMassIndex >= 30.0) {
+            System.out.println("Obese");
+        }
     }
 }
